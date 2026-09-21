@@ -86,9 +86,12 @@ class _DesktopHomePageState extends State<DesktopHomePage>
           alignment: Alignment.center,
           child: loadPowered(context),
         ),
-      Align(
-        alignment: Alignment.center,
-        child: loadLogo(),
+      Container(
+        width: double.infinity,
+        color: const Color(0xFF1A1A2E),
+        padding: const EdgeInsets.symmetric(vertical: 12),
+        child: Image.asset('assets/karadom_logo.png',
+            height: 66, fit: BoxFit.contain),
       ),
       buildTip(context),
       if (!isOutgoingOnly) buildIDBoard(context),
