@@ -29,7 +29,7 @@ bool filterAbTagByIntersection() {
   return bind.mainGetLocalOption(key: filterAbTagOption) == 'Y';
 }
 
-const _personalAddressBookName = "My address book";
+const _personalAddressBookName = "Rubrica personale";
 const _legacyAddressBookName = "Legacy address book";
 
 const kUntagged = "Untagged";
