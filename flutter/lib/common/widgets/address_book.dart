@@ -324,7 +324,7 @@ class _AddressBookState extends State<AddressBook> {
       } else {
         tags = gFFI.abModel.currentAbTags.toList();
       }
-      tags = [kUntagged, ...tags].toList();
+      tags = [...tags].toList(); // KaraDom: niente chip "Untagged"/"Senza tag"
       final editPermission = gFFI.abModel.current.canWrite();
       tagBuilder(String e) {
         return AddressBookTag(
