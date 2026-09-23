@@ -112,7 +112,7 @@ Future<void> main(List<String> args) async {
   } else {
     desktopType = DesktopType.main;
     await windowManager.ensureInitialized();
-    windowManager.setPreventClose(false);  // KaraDom: la X chiude, niente tray
+    windowManager.setPreventClose(true);  // KaraDom console: X e minimizza -> tray
     if (isMacOS) {
       disableWindowMovable(kWindowId);
     }

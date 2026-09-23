@@ -388,6 +388,9 @@ class _DesktopTabState extends State<DesktopTab>
   void onWindowMinimize() {
     stateGlobal.setMinimized(true);
     stateGlobal.setMaximized(false);
+    if (isMainWindow) {
+      windowManager.hide();  // KaraDom console: minimizza -> tray
+    }
     super.onWindowMinimize();
   }
 
