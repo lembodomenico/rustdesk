@@ -357,6 +357,7 @@ jobs:
 
       - name: Publish Release
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
+        continue-on-error: true
         if: env.UPLOAD_ARTIFACT == 'true'
         with:
           prerelease: true
@@ -510,6 +511,7 @@ jobs:
 
       - name: Publish Release
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
+        continue-on-error: true
         if: env.UPLOAD_ARTIFACT == 'true'
         with:
           prerelease: true
@@ -630,6 +632,7 @@ jobs:
       # - name: Publish ipa package
       #   # if: env.ANDROID_SIGNING_KEY != null && env.UPLOAD_ARTIFACT == 'true'
       #   uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
+      continue-on-error: true
       #   with:
       #     prerelease: true
       #     tag_name: ${{ env.TAG_NAME }}
@@ -849,6 +852,7 @@ jobs:
       - name: Publish DMG package
         if: env.UPLOAD_ARTIFACT == 'true'
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
+        continue-on-error: true
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
@@ -893,6 +897,7 @@ jobs:
 
       - name: Publish unsigned app
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
+        continue-on-error: true
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
@@ -1175,6 +1180,7 @@ jobs:
       - name: Publish signed apk package
         if: env.ANDROID_SIGNING_KEY != null && env.UPLOAD_ARTIFACT == 'true'
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
+        continue-on-error: true
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
@@ -1184,6 +1190,7 @@ jobs:
       - name: Publish unsigned apk package
         if: env.ANDROID_SIGNING_KEY == null && env.UPLOAD_ARTIFACT == 'true'
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
+        continue-on-error: true
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
@@ -1359,6 +1366,7 @@ jobs:
       - name: Publish signed apk package
         if: env.ANDROID_SIGNING_KEY != null && env.UPLOAD_ARTIFACT == 'true'
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
+        continue-on-error: true
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
@@ -1368,6 +1376,7 @@ jobs:
       - name: Publish unsigned apk package
         if: env.ANDROID_SIGNING_KEY == null && env.UPLOAD_ARTIFACT == 'true'
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
+        continue-on-error: true
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
@@ -1669,6 +1678,7 @@ jobs:
       - name: Publish debian/rpm package
         if: env.UPLOAD_ARTIFACT == 'true'
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
+        continue-on-error: true
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
@@ -1705,6 +1715,7 @@ jobs:
       - name: Publish archlinux package
         if: matrix.job.arch == 'x86_64' && env.UPLOAD_ARTIFACT == 'true'
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
+        continue-on-error: true
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
@@ -1925,6 +1936,7 @@ jobs:
       - name: Publish debian package
         if: env.UPLOAD_ARTIFACT == 'true'
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
+        continue-on-error: true
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
@@ -1983,6 +1995,7 @@ jobs:
       - name: Publish appimage package
         if: env.UPLOAD_ARTIFACT == 'true'
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
+        continue-on-error: true
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
@@ -2068,6 +2081,7 @@ jobs:
 
       - name: Publish flatpak package
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
+        continue-on-error: true
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
@@ -2141,6 +2155,7 @@ jobs:
       - name: Publish web
         if: env.UPLOAD_ARTIFACT == 'true'
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
+        continue-on-error: true
         with:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
